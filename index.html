@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="style.css" />
+  <link rel="stylesheet" media="screen and (max-width: 675px)" href="media.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css"
+    integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css'>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.7.2/font/bootstrap-icons.css">
+  <title>the weather</title>
+</head>
+
+<body>
+  <nav class="navbar">
+    <div class="logocontainer"> <img id="logo" src="logo.png">
+      <h2>the_weather</h2>
+    </div>
+    <div id="info">chitranjanhembrom</div>
+  </nav>
+
+  <div class="main">
+    <!--first part------------------------------------------------------------------------------------------------------->
+    <!-- place ---------------------------------------------------------------------------------------------------->
+    <div id="one" class="placebox">
+      <div class="place">bokaro</div>
+      <div class="place">london</div>
+      <div class="place">Nagpur</div>
+      <div class="place">Andaman and Nicobar Islands</div>
+      <div class="place">chicago</div>
+    </div>
+    <!-- search ------------------------------------------------------------------------------------------------------->
+    <div id="two" class="searchbox">
+      <input onchange="search(this)" type="text" name="" spellcheck="false" placeholder="Enter your city name ...."
+        required />
+      <button title="click to search" id="search" onclick="search(this)">
+        <i class="fa fa-search fa-xl" aria-hidden="true"></i>
+      </button>
+      <span title="click to get device location" id="location"><i class="fa-solid fa-location-dot"></i></span>
+      <span title="click to change units" id="cf">&#176C</span>
+    </div>
+    <!-- date and time ----------------------------------------------------------------------------------------------->
+    <div id="three" class="dtimebox">
+      <span class="dtime" id="fulldate"></span> |
+      <span class="dtime" id="time"></span>
+    </div>
+    <!------ second part --------------------------------------------------------------------------------------------->
+    <!---weather box-------------------------------------------------------------------------------------------------->
+    <div id="four" class="weatherbox">
+      <h2 id="city">Delhi,IN</h2>
+      <h5 id="wtype">Clear</h5>
+      <!-- temp display -------------------------------------------------------->
+      <div class="weathermain">
+        <figure id="cimg" class="wdata">
+          <img id="mainimg" src="" alt="cloud img">
+          <figcaption></figcaption>
+        </figure>
+        <div id="tempbox" class="wdata">
+          <h1 id="maintemp"><span id="animation"><i class='fa fa-thermometer-4
+                  red-color'></i></span><span id="temp">18&#176</span></h1>
+        </div>
+        <!-- humidity wind temp -------------------------------------------------->
+        <div id="sidedata" class="wdata">
+          <div class="sdata"><i class='fa fa-thermometer-half'></i><span id="realfeel">Real feel: 17&#176</span></div>
+          <div class="sdata"><i class='fa-solid fa-droplet'></i><span id="humidity">Humidity: 45%</span></div>
+          <div class="sdata"><i class='fas fa-wind'></i><span id="wind">Wind:
+              4km/hr</span></div>
+        </div>
+      </div>
+      <!-- sunset sunrise high low ------------------------------------------------->
+      <div id="lowerdata" class="wdata">
+        <span class="ldata"><span class="bi bi-sun white-color">
+          </span> <span id="rise">Rise: 04:50 AM</span></span> |
+        <span class="ldata"><span class="bi bi-sunset white-color"></span><span id="set">Set: 07:15 PM</span>
+        </span> <span class="dash">|</span>
+        <span class="ldata mq"><span class='bi bi-arrow-up'></span><span id="high">High: 19&#176</span>
+        </span> |
+        <span class="ldata"><span class='bi bi-arrow-down'></span><span id="low"> Low: 17&#176</span>
+        </span>
+      </div>
+    </div>
+    <!-- third part ------------------------------------------------------------------------------------------------------------------->
+    <div id="five" class="forecast ">
+      <!-- title 1 ------->
+      <div class="ftitle">
+        <h5>HOURLY FORECAST</h5>
+      </div>
+      <!-- box-outer 1 -->
+      <div class="hforecast ftext">
+        <!-- box1 -->
+        <div class="hfdata">
+          <div class="ht">01:00 PM</div>
+          <div class="hcimg" class="wdata"><img class="shi" src="" alt="cloud
+                img" srcset=""></div> 
+          <div class="htemp">18&#176</div>
+        </div>
+        <!-- box2 -->
+        <div class="hfdata">
+          <div class="ht">01:00 PM</div>
+          <div class="hcimg" class="wdata"><img class="shi" src="" alt="cloud
+                img" srcset=""></div>
+          <div class="htemp">18&#176</div>
+        </div>
+        <!-- box3 -->
+        <div class="hfdata">
+          <div class="ht">01:00 PM</div>
+          <div class="hcimg" class="wdata"><img class="shi" src="" alt="cloud
+                img" srcset=""></div>
+          <div class="htemp">18&#176</div>
+        </div>
+        <!-- box4 -->
+        <div class="hfdata">
+          <div class="ht">01:00 PM</div>
+          <div class="hcimg" class="wdata"><img class="shi" src="" alt="cloud
+                img" srcset=""></div>
+          <div class="htemp">18&#176</div>
+        </div>
+        <!-- box5 -->
+        <div class="hfdata">
+          <div class="ht">01:00 PM</div>
+          <div class="hcimg" class="wdata"><img class="shi" src="" alt="cloud
+                img" srcset=""></div>
+          <div class="htemp">18&#176</div>
+        </div>
+      </div>
+      <!-- title 2 ------->
+      <div class="ftitle">
+        <h5>DAILY FORECAST</h5>
+      </div>
+      <!-- box-outer 2 -->
+      <div class="dforecast ftext">
+        <!-- box1 -->
+        <div class="dfdata">
+          <div class="dd">WED</div>
+          <div class="dcimg" class="wdata"><img class="sdi" src="" alt="cloud
+                img" srcset=""></div>
+          <div class="dtemp">18&#176</div>
+        </div>
+        <!-- box2 -->
+        <div class="dfdata">
+          <div class="dd">THRUS</div>
+          <div class="dcimg" class="wdata"><img class="sdi" src="" alt="cloud
+                img" srcset=""></div>
+          <div class="dtemp">18&#176</div>
+        </div>
+        <!-- box3 -->
+        <div class="dfdata">
+          <div class="dd">FRI</div>
+          <div class="dcimg" class="wdata"><img class="sdi" src="" alt="cloud
+                img" srcset=""></div>
+          <div class="dtemp">18&#176</div>
+        </div>
+        <!-- box4 -->
+        <div class="dfdata">
+          <div class="dd">SAT</div>
+          <div class="dcimg" class="wdata"><img class="sdi" src="" alt="cloud
+                img" srcset=""></div>
+          <div class="dtemp">18&#176</div>
+        </div>
+        <!-- box5 -->
+        <div class="dfdata">
+          <div class="dd">SUN</div>
+          <div class="dcimg" class="wdata"><img class="sdi" src="" alt="cloud
+                img" srcset=""></div>
+          <div class="dtemp">18&#176</div>
+        </div>
+
+      </div>
+
+    </div>
+  </div>
+    <script src="script.js"></script>
+</body>
+
+</html>
